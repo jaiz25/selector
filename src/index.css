@@ -116,10 +116,11 @@ body {
 .star {
     width: 0;
     height: 0;
-    margin: 50px 0;
+    margin: 70px 0;
     color: #fc2e5a;
     position: relative;
     display: block;
+    border-top: 25px solid transparent;
     border-right: 100px solid transparent;
     border-bottom: 70px solid #fc2e5a;
     border-left: 100px solid transparent;
@@ -162,4 +163,11 @@ body {
     -moz-transform: rotate(-70deg);
     -ms-transform: rotate(-70deg);
     -o-transform: rotate(-70deg);
+}
+footer{
+  border: solid white 1px;
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  padding: 50px;
 }
