@@ -26,6 +26,12 @@ class Selector extends Component {
           <Shape shape="triangle" selectShape={this.selectShape}/>
           <Shape shape="circle" selectShape={this.selectShape}/>
         </div>
+
+        <div className="shape-list">
+          <Shape shape="oval" selectShape={this.selectShape}/>
+          <Shape shape="triangle_down" selectShape={this.selectShape}/>
+          <Shape shape="trapezium" selectShape={this.selectShape}/>
+        </div>
       </div>
     )
   }
