@@ -27,6 +27,12 @@ body {
   color: black;
   display: flex;
   align-items: center;
+  padding-left: 40%;
+  padding-right: 38%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 .navbar div {
@@ -164,10 +170,11 @@ body {
     -ms-transform: rotate(-70deg);
     -o-transform: rotate(-70deg);
 }
-footer{
+.footer{
   border: solid white 1px;
   background-color: white;
   color: black;
-  font-size: 2em;
+  font-size: 1.4em;
   padding: 50px;
+  font-weight: bold;
 }
