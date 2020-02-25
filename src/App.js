@@ -21,6 +21,13 @@ class Selector extends Component {
       count: this.state.count + 1,
     })
   }
+
+  clearClicks = () => {
+    this.setState({
+      count: 0,
+    })
+  }
+
   render() {
     return (
       <div className= "container">
@@ -28,43 +35,44 @@ class Selector extends Component {
           <div>Selected: <span>{this.state.selectedShape}</span></div>
         </div>
         <div className="shape-list">
-          <div onClick={this.countClicks}>
-          <Shape shape="square" selectShape={this.selectShape}
-           /></div>
-           <div onClick={this.countClicks}>
-          <Shape shape="triangle" selectShape={this.selectShape}/>
-          </div>
-          <div onClick={this.countClicks}>
-          <Shape shape="circle" selectShape={this.selectShape}/>
-          </div>
+            <span onClick={this.countClicks}>
+            <Shape shape="square" selectShape={this.selectShape} />
+            </span>
+            <span onClick={this.countClicks}>
+            <Shape shape="triangle" selectShape={this.selectShape} />
+            </span>
+            <span onClick={this.countClicks}>
+            <Shape shape="circle" selectShape={this.selectShape} />
+            </span>
+        </div>
+        <div className="shape-list">
+            <span onClick={this.countClicks}>
+            <Shape shape="oval" selectShape={this.selectShape} />
+            </span>
+            <span onClick={this.countClicks}>
+            <Shape shape="trapezium" selectShape={this.selectShape} />
+            </span>
+            <span onClick={this.countClicks}>
+            <Shape shape="triangle_down" selectShape={this.selectShape} />
+            </span>
         </div>
 
         <div className="shape-list">
-          <div onClick={this.countClicks}>
-          <Shape shape="oval" selectShape={this.selectShape}/>
-          </div>
-          <div onClick={this.countClicks}>
-          <Shape shape="trapezium" selectShape={this.selectShape}/>
-          </div>
-          <div onClick={this.countClicks}>
-          <Shape shape="triangle_down" selectShape={this.selectShape}/>
-          </div>
+            <span onClick={this.countClicks}>
+            <Shape shape="star" selectShape={this.selectShape} onClick={this.countClicks}/>
+            </span>
+            <span onClick={this.countClicks}>
+            <Shape shape="triangle_left" selectShape={this.selectShape} />
+            </span>
+            <span onClick={this.countClicks}>
+            <Shape shape="triangle_right" selectShape={this.selectShape} />
+            </span>
         </div>
 
-        <div className="shape-list">
-          <div onClick={this.countClicks}>
-          <Shape shape="star" selectShape={this.selectShape}/>
-          </div>
-          <div onClick={this.countClicks}>
-          <Shape shape="triangle_left" selectShape={this.selectShape}/>
-          </div>
-          <div onClick={this.countClicks}>
-          <Shape shape="triangle_right" selectShape={this.selectShape}/>
-          </div>
+        <div className="footer">Total clicks: {this.state.count}
+          <div><button onClick={this.clearClicks}>Clear</button></div>
         </div>
 
-        <div className="footer">Total clicks: {this.state.count}</div>
-  
       </div>
     )
   }
